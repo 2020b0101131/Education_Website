@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { courses } from '../data/courses';
-import { Card, CardContent, Typography, Accordion, AccordionSummary, AccordionDetails, Divider, Box, IconButton } from '@mui/material';
+import { Card, CardContent, Typography, Accordion, AccordionSummary, AccordionDetails, Divider, Box } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import SchoolIcon from '@mui/icons-material/School';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
