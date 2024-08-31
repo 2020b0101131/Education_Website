@@ -23,7 +23,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import BookIcon from '@mui/icons-material/Book';
-
+import { useNavigate } from 'react-router-dom';
 const drawerWidth = 240;
 
 const Search = styled('div')(({ theme }) => ({
@@ -69,6 +69,7 @@ export default function PrimarySearchAppBar() {
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
+  const navigate = useNavigate();
 
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
@@ -258,13 +259,13 @@ export default function PrimarySearchAppBar() {
               <ListItemIcon>
                 <DashboardIcon />
               </ListItemIcon>
-              <ListItemText primary="Dashboard" />
+              <ListItemText onClick={()=>{navigate(`/dashboard`)}}primary="Dashboard" />
             </ListItem>
             <ListItem button>
               <ListItemIcon>
                 <BookIcon />
               </ListItemIcon>
-              <ListItemText primary="Course List" />
+              <ListItemText onClick={()=>{navigate(`/`)}} primary="Course List" />
             </ListItem>
           </List>
           <Divider />
