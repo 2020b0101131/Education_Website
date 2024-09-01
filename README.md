@@ -1,6 +1,11 @@
 # Live Link for the project
 
 https://master--the-education.netlify.app/
+<br>
+Login Credentials:<br>
+Email : alice@example.com 
+<br>
+Password: abc123
 
 # Project Demo Video
 
