@@ -142,4 +142,7 @@ export const courses = [
     ],
     thumbnail: cyberSecurityImg, 
   },
+ 
+  
 ];
+

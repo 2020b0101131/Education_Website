@@ -21,12 +21,13 @@ const CourseList = () => {
   );
 
   return (
-    <Box sx={{ padding: '2rem', backgroundColor: '#F0F4F8', minHeight: '100vh' }}>
+    <Box sx={{ p:{md:2},backgroundColor: '#F0F4F8', minHeight: '100vh' }}>
+    
       <Typography variant="h3" component="h1" sx={{ fontWeight: 'bold', marginBottom: '2rem', textAlign: 'center', color: '#333' }}>
         Explore Our Courses
       </Typography>
 
-      <Card sx={{ padding: '2rem', boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.1)', backgroundColor: '#ffffff', borderRadius: '12px' }}>
+      <Card sx={{ p:{md:2}, boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.1)', backgroundColor: '#ffffff', borderRadius: '12px' }}>
         <CardContent>
           <TextField
             label="Search by course name or instructor"

@@ -14,6 +14,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
+import LogoutIcon from '@mui/icons-material/Logout';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
@@ -114,8 +115,10 @@ export default function PrimarySearchAppBar() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+      <MenuItem onClick={()=>navigate(`/dashboard`)}>Profile</MenuItem>
+      <MenuItem onClick={()=>navigate(`/login`)}>Logout</MenuItem>
+      {/* <MenuItem onClick={handleMenuClose}>Profile</MenuItem> */}
+      {/* <MenuItem onClick={handleMenuClose}>My account</MenuItem> */}
     </Menu>
   );
 
@@ -156,19 +159,36 @@ export default function PrimarySearchAppBar() {
         </IconButton>
         <p>Notifications</p>
       </MenuItem> */}
-      {/* <MenuItem onClick={handleProfileMenuOpen}> */}
+      <MenuItem >
         <IconButton
-          size="large"
-          aria-label="account of current user"
-          aria-controls="primary-search-account-menu"
-          aria-haspopup="true"
+          size="small"
+          // aria-label="account of current user"
+          // aria-controls="primary-search-account-menu"
+          // aria-haspopup="true"
           color="inherit"
           onClick={()=>{navigate(`/dashboard`)}}
         >
           <AccountCircle />
+          <Typography sx={{ml:1}}>Profile</Typography> 
         </IconButton>
         {/* <p>Profile</p> */}
-      {/* </MenuItem> */}
+        
+      </MenuItem>
+      <MenuItem >
+        <IconButton
+          size="small"
+          // aria-label="account of current user"
+          // aria-controls="primary-search-account-menu"
+          // aria-haspopup="true"
+          color="inherit"
+          onClick={()=>{navigate(`/login`)}}
+        >
+          <LogoutIcon /> 
+          <Typography sx={{ml:1}}>Logout</Typography> 
+        </IconButton>
+       
+        
+      </MenuItem>
     </Menu>
   );
 
@@ -220,8 +240,8 @@ export default function PrimarySearchAppBar() {
               aria-label="account of current user"
               aria-controls={menuId}
               aria-haspopup="true"
-              // onClick={handleProfileMenuOpen}
-              onClick={()=>navigate(`/dashboard`)}
+              onClick={handleProfileMenuOpen}
+              // onClick={()=>navigate(`/dashboard`)}
               color="inherit"
             >
               <AccountCircle />
@@ -233,18 +253,18 @@ export default function PrimarySearchAppBar() {
               aria-label="show more"
               aria-controls={mobileMenuId}
               aria-haspopup="true"
-              // onClick={handleMobileMenuOpen}
-              onClick={()=>navigate(`/dashboard`)}
+              onClick={handleMobileMenuOpen}
+              // onClick={()=>navigate(`/dashboard`)}
               color="inherit"
             >
-              {/* <MoreIcon /> */}
-              <AccountCircle/>
+              <MoreIcon />
+              {/* <AccountCircle/> */}
             </IconButton>
            
           </Box>
         </Toolbar>
       </AppBar>
-      {/* {renderMobileMenu} */}
+      {renderMobileMenu}
       {renderMenu}
       <Drawer
         variant="persistent"
