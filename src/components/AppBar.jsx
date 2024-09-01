@@ -134,7 +134,7 @@ export default function PrimarySearchAppBar() {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-      <MenuItem>
+      {/* <MenuItem>
         <IconButton size="large" aria-label="show 4 new mails" color="inherit">
           <Badge badgeContent={4} color="error">
             <MailIcon />
@@ -153,19 +153,20 @@ export default function PrimarySearchAppBar() {
           </Badge>
         </IconButton>
         <p>Notifications</p>
-      </MenuItem>
-      <MenuItem onClick={handleProfileMenuOpen}>
+      </MenuItem> */}
+      {/* <MenuItem onClick={handleProfileMenuOpen}> */}
         <IconButton
           size="large"
           aria-label="account of current user"
           aria-controls="primary-search-account-menu"
           aria-haspopup="true"
           color="inherit"
+          onClick={()=>{navigate(`/dashboard`)}}
         >
           <AccountCircle />
         </IconButton>
-        <p>Profile</p>
-      </MenuItem>
+        {/* <p>Profile</p> */}
+      {/* </MenuItem> */}
     </Menu>
   );
 
@@ -178,12 +179,12 @@ export default function PrimarySearchAppBar() {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, }}
+            sx={{ mr: 2, display:{sm:"none"}}}
           >
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            MUI
+            ALEMENO
           </Typography>
           <Search>
             <SearchIconWrapper>
@@ -196,12 +197,12 @@ export default function PrimarySearchAppBar() {
           </Search>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-            <IconButton size="large" aria-label="show 4 new mails" color="inherit">
+            {/* <IconButton size="large" aria-label="show 4 new mails" color="inherit">
               <Badge badgeContent={4} color="error">
                 <MailIcon />
               </Badge>
-            </IconButton>
-            <IconButton
+            </IconButton> */}
+            {/* <IconButton
               size="large"
               aria-label="show 17 new notifications"
               color="inherit"
@@ -209,14 +210,16 @@ export default function PrimarySearchAppBar() {
               <Badge badgeContent={17} color="error">
                 <NotificationsIcon />
               </Badge>
-            </IconButton>
+            </IconButton> */}
+            <Typography sx={{mt:1.5,mr:10,cursor:"pointer"}} onClick={()=>navigate(`/`)}>COURSES</Typography>
             <IconButton
               size="large"
               edge="end"
               aria-label="account of current user"
               aria-controls={menuId}
               aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
+              // onClick={handleProfileMenuOpen}
+              onClick={()=>navigate(`/dashboard`)}
               color="inherit"
             >
               <AccountCircle />
@@ -255,12 +258,12 @@ export default function PrimarySearchAppBar() {
         <Toolbar />
         <Box sx={{ overflow: 'auto' }}>
           <List>
-            <ListItem button>
+            {/* <ListItem button>
               <ListItemIcon>
                 <DashboardIcon />
               </ListItemIcon>
               <ListItemText onClick={()=>{navigate(`/dashboard`)}}primary="Dashboard" />
-            </ListItem>
+            </ListItem> */}
             <ListItem button>
               <ListItemIcon>
                 <BookIcon />

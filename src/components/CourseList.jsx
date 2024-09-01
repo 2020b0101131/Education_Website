@@ -12,7 +12,7 @@ const CourseList = () => {
   );
 
   return (
-    <Box sx={{ padding: '2rem' }}>
+    <Box sx={{ padding: '0' }}>
       <Card sx={{ padding: '2rem', boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.1)', backgroundColor: '#f0f0f0' }}>
         <CardContent>
           <TextField
