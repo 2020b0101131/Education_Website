@@ -1,12 +1,11 @@
-// src/components/Layout.js
 import React from 'react';
-import AppBar from './AppBar'; // Ensure this path is correct
+import AppBar from './AppBar'; 
 
 const Layout = ({ children }) => {
   return (
     <>
       <AppBar />
-      <main style={{ paddingTop: '64px' }}> {/* Adjust padding based on AppBar height */}
+      <main style={{ paddingTop: '64px' }}> 
         {children}
       </main>
     </>

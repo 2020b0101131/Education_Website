@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { markCourseAsCompleted } from '../redux/coursesSlice';
-import { Card, CardContent, Typography, Button, Grid, LinearProgress, Box } from '@mui/material';
+import { Card, CardContent, Typography, Button, Grid, LinearProgress, Box,Divider } from '@mui/material';
 
 const StudentDashboard = () => {
   const dispatch = useDispatch();
@@ -13,9 +13,10 @@ const StudentDashboard = () => {
 
   return (
     <Box sx={{ padding: '20px' }}>
-      <Typography variant="h4" gutterBottom>
+      <Typography variant="h5" sx={{fontWeight:"bold"}} gutterBottom>
         My Enrolled Courses
       </Typography>
+      <Divider style={{backgroundColor:"lightgray",height:"1px",marginBottom:"5px"}}/>
       <Grid container spacing={4}>
         {courses.map(course => (
           <Grid item xs={12} sm={6} md={4} key={course.id}>
